@@ -9,6 +9,7 @@ public class PlayerController : MonoBehaviour
     public float range = 20.0f;
 
     public GameObject food;
+    public GameObject superattack;
 
     void Start()
     {
@@ -34,7 +35,22 @@ public class PlayerController : MonoBehaviour
         }
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(food, transform.position, food.transform.rotation);
+            SpawnFood();
         }
+        else if (Input.GetKeyDown(KeyCode.Q))
+        {
+            {
+                SpawnSuper();
+            }
+        }
+    }
+
+    void SpawnFood()
+    {
+        Instantiate(food, transform.position, food.transform.rotation);
+    }
+    void SpawnSuper()
+    {
+        Instantiate(superattack, transform.position, superattack.transform.rotation);
     }
 }

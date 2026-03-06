@@ -1,3 +1,4 @@
+using TMPro;
 using UnityEngine;
 
 public class ANimalstuff : MonoBehaviour
@@ -6,16 +7,17 @@ public class ANimalstuff : MonoBehaviour
     private float lowerBound = -10;
     void Start()
     {
-        
+        A
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z > lowerBound) {
+        if (transform.position.z > topBound) {
             Destroy(gameObject);
         }
         else if (transform.position.z < lowerBound) {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
     }
