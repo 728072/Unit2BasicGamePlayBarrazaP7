@@ -7,7 +7,7 @@ public class ANimalstuff : MonoBehaviour
     private float lowerBound = -10;
     void Start()
     {
-        A
+        
     }
 
     // Update is called once per frame
